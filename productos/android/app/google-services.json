@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "74868882805",
+    "project_id": "derteanito",
+    "storage_bucket": "derteanito.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74868882805:android:7e83da46bd5100786be73c",
+        "android_client_info": {
+          "package_name": "productos.productos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74868882805-ibc04ijbg3d217v07h32g8e7jcu7avq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "productos.productos",
+            "certificate_hash": "c4e10978f212819b3857bc679fa1f1f5f8952217"
+          }
+        },
+        {
+          "client_id": "74868882805-qv1eftr3qrh9c8iv00j8mb9qesoqlesv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnhi1_CUsscCYEIwZ5je1U2zVVODPQqAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74868882805-qv1eftr3qrh9c8iv00j8mb9qesoqlesv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
