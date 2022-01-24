@@ -120,6 +120,22 @@ class HomePage extends StatelessWidget {
                 Colors.pinkAccent, Icons.read_more, 'Ver Producto', _),
           ],
         ),
+        TableRow(
+          children: [
+            _crearBotonRedondeado(
+                Colors.red, Icons.person_add, 'Crear Usuario', _),
+            _crearBotonRedondeado(Colors.greenAccent, Icons.person_rounded,
+                'Ver y editar Usuario', _),
+          ],
+        ),
+        TableRow(
+          children: [
+            _crearBotonRedondeado(
+                Colors.blueGrey, Icons.person_remove, 'Eliminar Usuario', _),
+            _crearBotonRedondeado(
+                Colors.black87, Icons.login_outlined, 'Cerrar Sesión', _),
+          ],
+        ),
       ],
     );
   }

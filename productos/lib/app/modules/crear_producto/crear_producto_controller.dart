@@ -5,10 +5,9 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:productos/app/data/providers/producto_provider.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-import 'package:uuid/uuid.dart';
 
 class CrearProductoController extends GetxController {
-  final ProduuctoProvider _produuctoProvider = ProduuctoProvider();
+  final ProductoProvider _produuctoProvider = ProductoProvider();
   final ImagePicker _picker = ImagePicker();
 
   String? _producto = '', _linea = '';
@@ -58,9 +57,9 @@ class CrearProductoController extends GetxController {
 
   void llenadoDeDatos() async {
     file = File(foto!.path);
-    String? nombreImagen = Uuid().v1();
-    String? imagePath = 'producto/$nombreImagen';
+    String? imagePath = 'producto/${producto}_$linea';
     String? urlImage;
+    bool respuesta = false;
 
     try {
       await firebase_storage.FirebaseStorage.instance
