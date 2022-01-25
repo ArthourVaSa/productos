@@ -24,6 +24,18 @@ class HomeController extends GetxController {
       case 'Ver Producto':
         Get.toNamed(AppRoutes.VER_PRODUCTO);
         break;
+      case 'Crear Usuario':
+        Get.toNamed(AppRoutes.CREAR_USUARIO);
+        break;
+      case 'Ver y editar Usuario':
+        Get.toNamed(AppRoutes.VER_EDITAR_USUARIO);
+        break;
+      case 'Eliminar Usuario':
+        Get.toNamed(AppRoutes.ELIMINAR_USUARIO);
+        break;
+      case 'Cerrar Sesión':
+        Get.toNamed(AppRoutes.LOGIN);
+        break;
       default:
     }
   }

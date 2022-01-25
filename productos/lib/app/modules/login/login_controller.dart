@@ -52,7 +52,13 @@ class LoginController extends GetxController {
     String? passwordProvidencial = datos["password"].toString();
 
     if (nombreProvidencial == _nombre && passwordProvidencial == _password) {
-      Get.offNamed(AppRoutes.HOME);
+      switch (datos['rol'].toString()) {
+        case 'administrador':
+          Get.offNamed(AppRoutes.HOME);
+          break;
+        case 'usuario':
+          Get.offNamed(AppRoutes.HOME_USUARIO);
+      }
     } else {
       Get.dialog(
         AlertDialog(

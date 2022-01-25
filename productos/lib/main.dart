@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: const HomePage(),
-      initialBinding: HomeBinding(),
+      home: const LoginPage(),
+      initialBinding: LoginBinding(),
       getPages: AppPage.page,
     );
   }

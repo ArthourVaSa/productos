@@ -142,47 +142,41 @@ class HomePage extends StatelessWidget {
 
   Widget _crearBotonRedondeado(
       Color color, IconData icono, String texto, HomeController _) {
-    return BackdropFilter(
-      filter: ImageFilter.blur(
-        sigmaX: 0.28,
-        sigmaY: 0.28,
-      ),
-      child: Container(
-        height: 180.0,
-        margin: const EdgeInsets.all(15.0),
-        decoration: BoxDecoration(
-            color: const Color.fromRGBO(62, 66, 107, 0.7),
-            borderRadius: BorderRadius.circular(20.0)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            const SizedBox(
-              height: 5.0,
+    return Container(
+      height: 180.0,
+      margin: const EdgeInsets.all(15.0),
+      decoration: BoxDecoration(
+          color: const Color.fromRGBO(62, 66, 107, 0.7),
+          borderRadius: BorderRadius.circular(20.0)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          const SizedBox(
+            height: 5.0,
+          ),
+          CircleAvatar(
+            backgroundColor: color,
+            radius: 35.0,
+            child: IconButton(
+              icon: Icon(icono),
+              onPressed: () {
+                _.actionValue(texto);
+                _.irATarea();
+              },
+              color: Colors.white,
+              iconSize: 30.0,
             ),
-            CircleAvatar(
-              backgroundColor: color,
-              radius: 35.0,
-              child: IconButton(
-                icon: Icon(icono),
-                onPressed: () {
-                  _.actionValue(texto);
-                  _.irATarea();
-                },
-                color: Colors.white,
-                iconSize: 30.0,
-              ),
+          ),
+          Text(
+            texto,
+            style: TextStyle(
+              color: color,
             ),
-            Text(
-              texto,
-              style: TextStyle(
-                color: color,
-              ),
-            ),
-            const SizedBox(
-              height: 5.0,
-            ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 5.0,
+          ),
+        ],
       ),
     );
   }
